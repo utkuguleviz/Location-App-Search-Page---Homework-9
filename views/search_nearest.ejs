@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SEARCH</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript">
+    navigator.geolocation.getCurrentPosition(success, fail);
+    var currLong, currLat;
+    function success(position){
+      currLong = position.coords.longitude;
+      currLat = position.coords.latitude;
+      console.log(currLong + " " + currLat);
+      setTimeout(post, 3000);
+    }
+    function fail(msg){
+      console.log(msg.code + msg.message)
+    }
+    function post(){
+      var form = document.createElement("form");
+      form.setAttribute("method", "POST");
+      form.setAttribute("action", "/search_nearest");
+
+      var hiddenLong = document.createElement("input");
+      hiddenLong.setAttribute("type", "hidden");
+      hiddenLong.setAttribute("name", "user_longitude");
+      hiddenLong.setAttribute("value", currLong);
+
+      var hiddenLat = document.createElement("input");
+      hiddenLat.setAttribute("type", "hidden");
+      hiddenLat.setAttribute("name", "user_latitude");
+      hiddenLat.setAttribute("value", currLat);
+
+      form.appendChild(hiddenLong);
+      form.appendChild(hiddenLat);
+
+      document.body.appendChild(form);
+      form.submit();
+    }
+  </script>
+  </head>
+  <body>
+    <h1>SEARCH</h1>
+    <p>Your location is getting identified, Please wait a second.</p>
+  </body>
+  
+</html>

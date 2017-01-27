@@ -1,0 +1,25 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dialog": "^0.2.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "ip-geolocate": "^1.0.1",
+    "iplocation": "^2.0.1",
+    "less-middleware": "~2.2.0",
+    "mongodb": "^2.2.22",
+    "mongoskin": "^2.1.0",
+    "morgan": "~1.7.0",
+    "node-geocoder": "^3.16.0",
+    "node-geolocation": "^1.15.14",
+    "serve-favicon": "~2.3.0"
+  }
+}

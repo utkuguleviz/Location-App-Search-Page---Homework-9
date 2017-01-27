@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SEARCH</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>SEARCH</h1>
+    <form action="/search_nearest" method="POST">
+        <input type="hidden" name="searchform" value="true">
+        <input type="hidden" name="longitude" value="<%= longitude %>">
+        <input type="hidden" name="latitude" value="<%= latitude %>">
+        Name:<br>
+        <input type="text" name="searchtext" value="">
+        <br><br>
+        <input type="submit" value="Search">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>Location APP</title>
+<body>
+
+<h2>ADD NEW LOCATION</h2>
+<form action="http://localhost:3000/location_app" method="POST">
+  <input type="hidden" name="type" value="add">
+  Name:<br>
+  <input type="text" name="name" value="Fairfield Add 1">
+  <br>
+  Category:<br>
+  <input type="text" name="category" value="Cavus Add 1">
+  <br>
+  Longitude:<br>
+  <input type="text" name="longitude" value="31">
+  <br>
+  Latitude:<br>
+  <input type="text" name="latitude" value="31">
+  <br><br>
+  <input type="submit" value="Add">
+</form>
+
+<h2>UPDATE LOCATION</h2>
+<form action="http://localhost:3000/location_app" method="POST">
+  <input type="hidden" name="type" value="update">
+  Name:<br>
+  <input type="text" name="name" value="Fairfield Update 1">
+  <br>
+  Category:<br>
+  <input type="text" name="category" value="Cavus Update 1">
+  <br>
+  Longitude:<br>
+  <input type="text" name="longitude" value="31">
+  <br>
+  Latitude:<br>
+  <input type="text" name="latitude" value="31">
+  <br><br>
+  <input type="submit" value="Update">
+</form>
+
+<h2>REMOVE LOCATION</h2>
+<form action="http://localhost:3000/location_app" method="POST">
+  <input type="hidden" name="type" value="remove">
+  Longitude:<br>
+  <input type="text" name="longitude" value="31.31">
+  <br>
+  Latitude:<br>
+  <input type="text" name="latitude" value="31.31">
+  <br><br>
+  <input type="submit" value="Remove">
+</form>  
+
+</body>
+</html>
